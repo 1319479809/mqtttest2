@@ -24,6 +24,7 @@ type Config struct {
 	CaCert   string
 }
 
+// 默认远端broker.emqx.io 本地127.0.0.1
 var Host = flag.String("host", "127.0.0.1", "server hostname or IP")            //ip
 var Port = flag.Int("port", 1883, "server port")                                //port
 var Action = flag.String("action", "pubsub", "pub/sub/pubsub action")           //动作
