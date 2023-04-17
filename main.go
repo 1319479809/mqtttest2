@@ -53,6 +53,7 @@ func main() {
 	}
 }
 
+// 推送
 func Pub(client mqtt.Client, topic string) {
 	pubClient := client
 	i := 1
@@ -66,6 +67,7 @@ func Pub(client mqtt.Client, topic string) {
 	}
 }
 
+// 订阅
 func Sub(client mqtt.Client, topic string) {
 	subClient := client
 	subClient.Subscribe(topic, 0, func(subClient mqtt.Client, msg mqtt.Message) {
